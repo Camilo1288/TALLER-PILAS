@@ -12,5 +12,10 @@ public class Main {
     public static void main(String[] args) {
         Palindromo p = new Palindromo();
         System.out.println(p.limpiar("Isaac no ronca así"));
+    
+    Pila pila = p.llenarPila("abc");
+        System.out.println(pila.pop());
+        System.out.println(pila.pop());
+        System.out.println(pila.pop());
     }
 }

@@ -19,4 +19,12 @@ public class Palindromo {
         }
         return resultado;
     }
+      public Pila llenarPila(String limpia) {
+        Pila pila = new Pila();
+        for (int i = 0; i < limpia.length(); i++) {
+            char letra = limpia.charAt(i);
+            pila.push(letra);
+        }
+        return pila;
+    }
 }
