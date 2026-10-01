@@ -3,13 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.lasalle.tallerpilas.ejercicio02;
-
+ import java.text.Normalizer;
 /**
  *
  * @author Usuario
  */
 public class Palindromo {
      public String limpiar(String frase) {
+         frase = Normalizer.normalize(frase, Normalizer.Form.NFD).replaceAll("\\p{M}", "");
         String resultado = "";
         for (int i = 0; i < frase.length(); i++) {
             char letra = frase.charAt(i);

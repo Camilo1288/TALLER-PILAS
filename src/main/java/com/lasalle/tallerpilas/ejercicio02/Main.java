@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.lasalle.tallerpilas.ejercicio02;
+import java.util.Scanner;
 
 /**
  *
@@ -10,16 +11,22 @@ package com.lasalle.tallerpilas.ejercicio02;
  */
 public class Main {
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
         Palindromo p = new Palindromo();
-        System.out.println(p.limpiar("Isaac no ronca así"));
-    
-    Pila pila = p.llenarPila("abc");
-        System.out.println(pila.pop());
-        System.out.println(pila.pop());
-        System.out.println(pila.pop());
-        
-      System.out.println(p.esPalindromo("somos"));
-        System.out.println(p.esPalindromo("radar"));
-        System.out.println(p.esPalindromo("hola"));
+        String otra;
+
+        do {
+            System.out.print("Escribe una frase: ");
+            String frase = teclado.nextLine();
+
+            if (p.esPalindromo(frase)) {
+                System.out.println("Es palíndromo");
+            } else {
+                System.out.println("No es palíndromo");
+            }
+
+            System.out.print("Otra vez (s/n)? ");
+            otra = teclado.nextLine();
+        } while (otra.equalsIgnoreCase("s"));
     }
 }
