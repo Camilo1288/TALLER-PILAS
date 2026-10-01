@@ -27,4 +27,16 @@ public class Palindromo {
         }
         return pila;
     }
+      public boolean esPalindromo(String frase) {
+        String limpia = limpiar(frase);
+        Pila pila = llenarPila(limpia);
+        for (int i = 0; i < limpia.length(); i++) {
+            char original = limpia.charAt(i);
+            char alReves = pila.pop();
+            if (original != alReves) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

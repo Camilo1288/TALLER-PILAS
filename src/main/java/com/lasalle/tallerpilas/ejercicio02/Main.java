@@ -17,5 +17,9 @@ public class Main {
         System.out.println(pila.pop());
         System.out.println(pila.pop());
         System.out.println(pila.pop());
+        
+      System.out.println(p.esPalindromo("somos"));
+        System.out.println(p.esPalindromo("radar"));
+        System.out.println(p.esPalindromo("hola"));
     }
 }
