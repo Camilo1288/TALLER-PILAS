@@ -19,4 +19,30 @@ public class SumaRestaGrandes {
         }
         return pila;
     }
+    public static String sumarPilas(Stack<Integer> p1, Stack<Integer> p2) {
+        Stack<Integer> resultado = new Stack<>();
+        int acarreo = 0;
+
+        while (!p1.isEmpty() || !p2.isEmpty() || acarreo > 0) {
+            int suma = acarreo;
+            
+            if (!p1.isEmpty()) {
+                suma += p1.pop();
+            }
+            
+            if (!p2.isEmpty()) {
+                suma += p2.pop();
+            }
+            
+            acarreo = suma / 10;
+            resultado.push(suma % 10);
+        }
+
+        // Construir el string final del resultado
+        StringBuilder sb = new StringBuilder();
+        while (!resultado.isEmpty()) {
+            sb.append(resultado.pop());
+        }
+        return sb.toString();
+    }
 }
