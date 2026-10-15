@@ -35,4 +35,20 @@ public class Biblioteca {
         System.out.println("Repisa 2 (fondo -> tope): " + repisa2);
         System.out.println("Repisa 3: " + repisa3);
     }
+    public void ordenar() {
+        while (!repisa1.isEmpty()) {
+            insertarOrdenado(repisa1.pop());
+        }
+        while (!repisa2.isEmpty()) {
+            insertarOrdenado(repisa2.pop());
+        }
+    }
+
+    private void insertarOrdenado(int tomo) {
+        int i = 0;
+        while (i < repisa3.size() && repisa3.get(i) < tomo) {
+            i++;
+        }
+        repisa3.add(i, tomo);
+    }
 }
