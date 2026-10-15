@@ -45,4 +45,27 @@ public class SumaRestaGrandes {
         }
         return sb.toString();
     }
+    public static void main(String[] args) {
+        String num1 = "98765432109876543210";
+        String num2 = "12345678901234567890";
+
+        // Suma
+        Stack<Integer> p1Suma = convertirAPila(num1);
+        Stack<Integer> p2Suma = convertirAPila(num2);
+        String resultadoSuma = sumarPilas(p1Suma, p2Suma);
+
+        // Resta
+        Stack<Integer> p1Resta = convertirAPila(num1);
+        Stack<Integer> p2Resta = convertirAPila(num2);
+        String resultadoResta = restarPilas(p1Resta, p2Resta);
+
+        System.out.println("Número 1: " + num1);
+        System.out.println("Número 2: " + num2);
+        System.out.println("Resultado Suma: " + resultadoSuma);
+        System.out.println("Resultado Resta: " + resultadoResta);
+    }
+
+    private static String restarPilas(Stack<Integer> p1Resta, Stack<Integer> p2Resta) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
