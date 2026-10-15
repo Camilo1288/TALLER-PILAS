@@ -36,4 +36,8 @@ public class Pila<T> {
     public int size() {
         return elementos.size();
     }
+    @Override
+    public String toString() {
+        return elementos.toString();
+    }
 }

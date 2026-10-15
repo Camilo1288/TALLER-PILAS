@@ -30,4 +30,9 @@ public class Biblioteca {
             }
         }
     }
+    public void mostrarRepisas() {
+        System.out.println("Repisa 1 (fondo -> tope): " + repisa1);
+        System.out.println("Repisa 2 (fondo -> tope): " + repisa2);
+        System.out.println("Repisa 3: " + repisa3);
+    }
 }
